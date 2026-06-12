@@ -20,61 +20,70 @@ const STATUS_BREAKDOWN: {
 interface DepotStatusBreakdownProps {
   summary: DepotSummary;
   onNavigate?: (filter: ChargerStatus) => void;
+  /** Stagger index offset so cards animate after KPI row. */
+  indexOffset?: number;
 }
 
 /**
- * Live charger status counts — charging, faulted, offline, available.
- * Surfaces depot health at a glance without replacing the time-filtered KPI row.
+ * Live charger status — four individual bento placards (matches KPI row above).
  */
 export function DepotStatusBreakdown({
   summary,
   onNavigate,
+  indexOffset = 4,
 }: DepotStatusBreakdownProps) {
   if (summary.totalChargers === 0) return null;
 
   return (
-    <AnimatedCard index={0} className="surface-soft px-4 py-4 sm:px-5 sm:py-5">
-      <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-fog">
+    <div className="flex flex-col gap-3">
+      <p className="px-0.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-fog">
         Charger status · live
       </p>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        {STATUS_BREAKDOWN.map(({ key, filter }) => {
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+        {STATUS_BREAKDOWN.map(({ key, filter }, i) => {
           const meta = STATUS_META[key];
           const count = summary.countsByStatus[key];
           const isProblem = key === "faulted" || key === "offline";
+          const highlight = isProblem && count > 0;
 
           return (
-            <button
+            <AnimatedCard
               key={key}
-              type="button"
+              asButton
+              index={indexOffset + i}
               onClick={() => filter && onNavigate?.(filter)}
-              className={`flex items-center gap-3 rounded-xl border px-3 py-2.5 text-left transition-colors duration-300 ${
-                isProblem && count > 0
-                  ? "border-[color-mix(in_srgb,var(--color-bone)_12%,transparent)] hover:bg-iron"
-                  : "border-ink hover:bg-iron"
+              className={`surface-soft px-4 py-4 text-left sm:px-5 sm:py-5 ${
+                highlight
+                  ? "ring-1 ring-[color-mix(in_srgb,var(--color-bone)_10%,transparent)]"
+                  : ""
               }`}
+              style={
+                highlight
+                  ? {
+                      boxShadow: `inset 3px 0 0 ${meta.color}`,
+                    }
+                  : undefined
+              }
             >
-              <span
-                className="inline-flex items-center justify-center rounded-lg border border-ink p-1.5"
-                style={{
-                  backgroundColor: `color-mix(in srgb, ${meta.color} 14%, transparent)`,
-                }}
-              >
-                <StatusIcon status={key} size={16} />
-              </span>
-              <span className="flex flex-col gap-0.5">
-                <span
-                  className="text-[20px] font-bold leading-none text-bone"
-                  style={{ fontFamily: "var(--font-geist)" }}
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-fog">
+                {meta.label}
+              </p>
+              <div className="flex items-center gap-2.5">
+                <StatusIcon status={key} size={22} strokeWidth={1.75} />
+                <p
+                  className="text-[24px] font-bold leading-none sm:text-[26px]"
+                  style={{
+                    fontFamily: "var(--font-geist)",
+                    color: meta.color,
+                  }}
                 >
                   {formatNumber(count)}
-                </span>
-                <span className="text-[12px] text-fog">{meta.label}</span>
-              </span>
-            </button>
+                </p>
+              </div>
+            </AnimatedCard>
           );
         })}
       </div>
-    </AnimatedCard>
+    </div>
   );
 }
