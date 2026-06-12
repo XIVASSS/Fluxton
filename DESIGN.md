@@ -63,9 +63,9 @@ RootLayout (fonts, dawn-glow canvas)
                 └── FaultLog             combining filters + table + empty states
 ```
 
-**Shared primitives** (`src/components/ui/`): `StatusBadge`, `StatusDot`, `StatusIcon`, `EmptyState`, `GlassCard`, `Pill`, `RadialGauge`, `icons`.
+**Shared primitives** (`src/components/ui/`): `StatusBadge`, `StatusDot`, `EmptyState`, `GlassCard`, `Pill`, `RadialGauge`, `icons`.
 
-**Motion primitives** (`src/components/motion/`): `AnimatedCard`, `AnimatedCounter`, `TabPanel`, `StaggerList` — presentation only; no business logic.
+**Motion primitives** (`src/components/motion/`): `AnimatedCard`, `AnimatedCounter`, `TabPanel`, `staggerItem` — presentation only; no business logic.
 
 **Domain + transforms** (`src/lib/`): `types.ts`, `selectors.ts`, `time.ts`, `format.ts`, `constants.ts`, `mock/`.
 
@@ -209,8 +209,6 @@ Algorithm:
 3. **Return** ordered array — days outside the window are ignored; days inside with no data stay at zero.
 
 This guarantees a zero-session day **appears as zero**, never omitted.
-
-`getFaultSeries` uses the same zero-fill pattern for optional sparkline-style views.
 
 ### Charger detail (`getChargerDetail`)
 

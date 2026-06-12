@@ -7,7 +7,6 @@ interface RadialGaugeProps {
   percent: number;
   centerPrimary: string;
   centerSecondary?: string;
-  label?: string;
   accentColor?: string;
 }
 
@@ -18,7 +17,6 @@ export function RadialGauge({
   percent,
   centerPrimary,
   centerSecondary,
-  label = "IN TRANSFER",
   accentColor = "var(--color-lavender)",
 }: RadialGaugeProps) {
   const clamped = Math.min(100, Math.max(0, percent));
@@ -29,11 +27,6 @@ export function RadialGauge({
 
   return (
     <div className="relative mx-auto aspect-square w-full max-w-[220px]">
-      {label && (
-        <span className="pill-lavender absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.08em]">
-          {label}
-        </span>
-      )}
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie
@@ -53,16 +46,18 @@ export function RadialGauge({
           </Pie>
         </PieChart>
       </ResponsiveContainer>
-      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center">
-        <p
-          className="text-[22px] font-semibold leading-tight text-bone sm:text-[24px]"
-          style={{ fontFamily: "var(--font-geist)" }}
-        >
-          {centerPrimary}
-        </p>
-        {centerSecondary && (
-          <p className="mt-1 text-[12px] text-fog">{centerSecondary}</p>
-        )}
+      <div className="pointer-events-none absolute inset-0 grid place-items-center">
+        <div className="text-center">
+          <p
+            className="text-[22px] font-semibold leading-tight text-bone sm:text-[24px]"
+            style={{ fontFamily: "var(--font-geist)" }}
+          >
+            {centerPrimary}
+          </p>
+          {centerSecondary && (
+            <p className="mt-0.5 text-[12px] leading-snug text-fog">{centerSecondary}</p>
+          )}
+        </div>
       </div>
     </div>
   );

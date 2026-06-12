@@ -156,44 +156,6 @@ export function getUsageSeries(
   });
 }
 
-export interface FaultDay {
-  /** Local day key (YYYY-MM-DD). */
-  date: string;
-  /** Midnight timestamp for the bucket. */
-  timestamp: number;
-  count: number;
-}
-
-/**
- * Faults per day over the trailing window, zero-filled like the usage series.
- * Powers the fault-trend sparkline on the summary card.
- */
-export function getFaultSeries(
-  faults: Fault[],
-  days = 7,
-  now: number = Date.now(),
-): FaultDay[] {
-  const buckets = new Map<string, FaultDay>();
-  const order: string[] = [];
-
-  for (let i = days - 1; i >= 0; i--) {
-    const dayMs = new Date(now);
-    dayMs.setHours(0, 0, 0, 0);
-    dayMs.setDate(dayMs.getDate() - i);
-    const key = dayKey(dayMs.getTime());
-    order.push(key);
-    buckets.set(key, { date: key, timestamp: dayMs.getTime(), count: 0 });
-  }
-
-  for (const fault of faults) {
-    const key = dayKey(new Date(fault.timestamp).getTime());
-    const bucket = buckets.get(key);
-    if (bucket) bucket.count += 1;
-  }
-
-  return order.map((key) => buckets.get(key)!);
-}
-
 // ---------------------------------------------------------------------------
 // Charger detail
 // ---------------------------------------------------------------------------

@@ -7,7 +7,6 @@ import type { DepotSummary, UsageDay } from "@/lib/selectors";
 import type { TimeRange } from "@/lib/time";
 import { STATUS_META } from "@/lib/constants";
 import { formatKwh, formatNumber, formatRelative } from "@/lib/format";
-import type { DashboardTab } from "@/lib/dashboard-tabs";
 import { UsageChart } from "../UsageChart";
 import { AnimatedCard } from "../motion/AnimatedCard";
 import { AnimatedCounter } from "../motion/AnimatedCounter";
@@ -28,7 +27,6 @@ interface OverviewTabProps {
   chargers: Charger[];
   recentFaultByCharger: Map<string, Fault>;
   onSelectCharger: (id: string) => void;
-  onTabChange: (tab: DashboardTab) => void;
   onNavigateChargers?: () => void;
   onNavigateUsage?: () => void;
   onNavigateFaults?: () => void;
@@ -43,7 +41,6 @@ export function OverviewTab({
   chargers,
   recentFaultByCharger,
   onSelectCharger,
-  onTabChange,
   onNavigateChargers,
   onNavigateUsage,
   onNavigateFaults,
@@ -118,7 +115,7 @@ export function OverviewTab({
           asButton
           index={1}
           onClick={onNavigateChargers}
-          className="panel-rich flex flex-col justify-between p-6 text-left sm:p-8 lg:col-span-4"
+          className="panel-rich flex flex-col justify-between gap-6 p-6 pt-7 text-left sm:p-8 sm:pt-9 lg:col-span-4"
         >
           <p
             className="text-[12px] font-semibold uppercase tracking-[0.1em] text-fog"
@@ -127,15 +124,18 @@ export function OverviewTab({
             Depot efficiency
           </p>
           <p
-            className="my-4 text-[72px] font-bold leading-none sm:text-[80px] text-gradient-stat"
+            className="text-[72px] font-bold leading-none sm:text-[80px] text-gradient-stat"
             style={{ fontFamily: "var(--font-dm-sans)" }}
           >
             <AnimatedCounter value={healthPct} suffix="%" />
           </p>
           <p className="text-[14px] leading-relaxed text-mist">
-            Efficiency is {healthPct >= 80 ? "above average" : "below target"} based on{" "}
-            <span className="pill-lime mx-1 text-[12px] font-semibold">
-              {summary.totalChargers} parameters
+            Efficiency is {healthPct >= 80 ? "above average" : "below target"}{" "}
+            <span className="whitespace-nowrap">
+              based on{" "}
+              <span className="pill-lime inline-flex align-middle text-[12px] font-semibold">
+                {summary.totalChargers} parameters
+              </span>
             </span>{" "}
             across live charger status.
           </p>
@@ -145,19 +145,23 @@ export function OverviewTab({
           asButton
           index={2}
           onClick={onNavigateUsage}
-          className="panel-rich flex flex-col items-center justify-center p-6 sm:p-8 lg:col-span-4"
+          className="panel-rich flex flex-col items-center justify-center gap-4 p-6 pt-7 sm:p-8 sm:pt-9 lg:col-span-4"
         >
-          <p
-            className="mb-2 self-start text-[12px] font-semibold uppercase tracking-[0.1em] text-fog"
-            style={{ fontFamily: "var(--font-dm-sans)" }}
-          >
-            Energy delivered
-          </p>
+          <div className="flex w-full items-center justify-between gap-3">
+            <p
+              className="text-[12px] font-semibold uppercase tracking-[0.1em] text-fog"
+              style={{ fontFamily: "var(--font-dm-sans)" }}
+            >
+              Energy delivered
+            </p>
+            <span className="pill-lavender shrink-0 text-[10px] font-semibold uppercase tracking-[0.08em]">
+              {timeRange.metricSuffix.toUpperCase()}
+            </span>
+          </div>
           <RadialGauge
             percent={energyPct}
             centerPrimary={formatKwh(summary.energyKwh)}
             centerSecondary={`from ${formatKwh(capacityTargetKwh)} target`}
-            label={timeRange.metricSuffix.toUpperCase()}
           />
         </AnimatedCard>
 

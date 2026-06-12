@@ -21,11 +21,6 @@
   --color-salmon: #ff9b8a;
   --color-indigo-haze: #b8a4f5;
 
-  /* Elevated light surface */
-  --color-surface-elevated: #fafafa;
-  --color-surface-elevated-text: #0c0c0e;
-  --color-surface-elevated-muted: #6b6b76;
-
   /* Text */
   --color-bone: #ffffff;
   --color-mist: #c8c8d0;
@@ -149,23 +144,6 @@ body {
   border: 1px solid var(--color-ink);
 }
 
-/* Asymmetrical white widget — stepped top-right corner */
-.widget-white {
-  background-color: var(--color-surface-elevated);
-  color: var(--color-surface-elevated-text);
-  border-radius: 28px 14px 28px 28px;
-  box-shadow:
-    0 24px 48px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-
-.panel-elevated {
-  background-color: var(--color-surface-elevated);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 28px 14px 28px 28px;
-  color: var(--color-surface-elevated-text);
-}
-
 /* Gradient hero stat */
 .text-gradient-stat {
   background: linear-gradient(135deg, #ffffff 0%, var(--color-lavender) 100%);
@@ -224,11 +202,6 @@ body {
 ::selection {
   background: rgba(184, 164, 245, 0.35);
   color: var(--color-paper);
-}
-
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.08); }
 }
 
 @keyframes pathDraw {

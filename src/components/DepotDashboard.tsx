@@ -8,7 +8,6 @@ import {
   EMPTY_FAULT_FILTERS,
   getChargerDetail,
   getDepotSummary,
-  getFaultSeries,
   getUsageSeries,
   sortChargersByPriority,
   type FaultFilters,
@@ -172,7 +171,6 @@ export function DepotDashboard() {
                     chargers={data.chargers}
                     recentFaultByCharger={recentFaultByCharger}
                     onSelectCharger={handleSelectFromOverview}
-                    onTabChange={changeTab}
                     onNavigateChargers={() => goToChargers()}
                     onNavigateUsage={() => changeTab("usage")}
                     onNavigateFaults={() => changeTab("faults")}

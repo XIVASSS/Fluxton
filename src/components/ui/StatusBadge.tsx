@@ -1,41 +1,9 @@
 import type { ChargerStatus } from "@/lib/types";
 import { STATUS_META } from "@/lib/constants";
-import {
-  AlertTriangleIcon,
-  BoltIcon,
-  PlugIcon,
-  PowerOffIcon,
-} from "./icons";
-
-const STATUS_ICON: Record<
-  ChargerStatus,
-  (props: { size?: number }) => React.ReactNode
-> = {
-  available: PlugIcon,
-  charging: BoltIcon,
-  faulted: AlertTriangleIcon,
-  offline: PowerOffIcon,
-};
-
-/** The status icon alone (color carried by `currentColor`). */
-export function StatusIcon({
-  status,
-  size = 16,
-}: {
-  status: ChargerStatus;
-  size?: number;
-}) {
-  const Icon = STATUS_ICON[status];
-  return (
-    <span style={{ color: STATUS_META[status].color }} className="inline-flex">
-      <Icon size={size} />
-    </span>
-  );
-}
 
 /**
- * Pill badge combining a status dot, icon, and label. Color + icon both encode
- * status so it never relies on the text label alone.
+ * Pill badge combining a status dot and label. Color encodes status alongside
+ * the text label and row-level dots elsewhere in the UI.
  */
 export function StatusBadge({
   status,

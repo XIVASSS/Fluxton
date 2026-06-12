@@ -22,14 +22,6 @@ export function formatDateTime(iso: string): string {
   });
 }
 
-/** e.g. "13 Jun" */
-export function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "short",
-  });
-}
-
 /** Compact relative age, e.g. "3m ago", "5h ago", "2d ago". */
 export function formatRelative(iso: string, now: number = Date.now()): string {
   const diffMs = now - new Date(iso).getTime();
