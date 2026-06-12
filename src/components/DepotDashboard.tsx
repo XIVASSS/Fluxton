@@ -175,6 +175,7 @@ export function DepotDashboard() {
                     onNavigateUsage={() => changeTab("usage")}
                     onNavigateFaults={() => changeTab("faults")}
                     onNavigateCharging={() => goToChargers(undefined, "charging")}
+                    onNavigateStatus={(filter) => goToChargers(undefined, filter)}
                   />
                 )}
                 {activeTab === "chargers" && (
@@ -188,7 +189,9 @@ export function DepotDashboard() {
                     defaultFilter={chargerFilter}
                   />
                 )}
-                {activeTab === "usage" && <UsageTab series={usageSeries} />}
+                {activeTab === "usage" && (
+                  <UsageTab series={usageSeries} totalChargers={data.chargers.length} />
+                )}
                 {activeTab === "faults" && (
                   <FaultsTab
                     faults={data.faults}

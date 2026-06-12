@@ -1,5 +1,6 @@
 import type { ChargerStatus } from "@/lib/types";
 import { STATUS_META } from "@/lib/constants";
+import { StatusIcon } from "./StatusIcon";
 
 /**
  * Pill badge combining a status dot and label. Color encodes status alongside
@@ -26,7 +27,7 @@ export function StatusBadge({
         fontFamily: "var(--font-dm-sans)",
       }}
     >
-      <StatusDot status={status} pulse={status === "charging"} />
+      <StatusIcon status={status} size={isSm ? 12 : 14} />
       {meta.label}
     </span>
   );

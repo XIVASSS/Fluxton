@@ -2,7 +2,7 @@
 
 import { ArrowRight, CheckCircle2, Pause, Play } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Charger, Fault } from "@/lib/types";
+import type { Charger, Fault, ChargerStatus } from "@/lib/types";
 import type { DepotSummary, UsageDay } from "@/lib/selectors";
 import type { TimeRange } from "@/lib/time";
 import { STATUS_META } from "@/lib/constants";
@@ -18,6 +18,7 @@ import { SessionPipeline } from "../overview/SessionPipeline";
 import { TaskTimeChart } from "../overview/TaskTimeChart";
 import { WorkflowCtaCard } from "../overview/WorkflowCtaCard";
 import { CompletedSessionsCard } from "../overview/CompletedSessionsCard";
+import { DepotStatusBreakdown } from "../DepotStatusBreakdown";
 
 interface OverviewTabProps {
   summary: DepotSummary;
@@ -31,6 +32,7 @@ interface OverviewTabProps {
   onNavigateUsage?: () => void;
   onNavigateFaults?: () => void;
   onNavigateCharging?: () => void;
+  onNavigateStatus?: (filter: ChargerStatus) => void;
 }
 
 export function OverviewTab({
@@ -45,6 +47,7 @@ export function OverviewTab({
   onNavigateUsage,
   onNavigateFaults,
   onNavigateCharging,
+  onNavigateStatus,
 }: OverviewTabProps) {
   const { countsByStatus } = summary;
   const problems = countsByStatus.faulted + countsByStatus.offline;
@@ -109,6 +112,8 @@ export function OverviewTab({
           onClick={onNavigateFaults}
         />
       </div>
+
+      <DepotStatusBreakdown summary={summary} onNavigate={onNavigateStatus} />
 
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-12 lg:gap-6">
         <AnimatedCard

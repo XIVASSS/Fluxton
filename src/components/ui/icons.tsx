@@ -31,6 +31,14 @@ export function PlugIcon(props: IconProps) {
   );
 }
 
+export function BoltIcon(props: IconProps) {
+  return (
+    <Base {...props}>
+      <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" />
+    </Base>
+  );
+}
+
 export function AlertTriangleIcon(props: IconProps) {
   return (
     <Base {...props}>
