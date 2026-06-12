@@ -1,0 +1,861 @@
+{
+  "depotId": "DPT-NORTH-01",
+  "depotName": "Northgate Depot",
+  "chargers": [
+    {
+      "id": "CHG-A1",
+      "label": "Bay A1",
+      "connectorType": "CCS2",
+      "maxPowerKw": 350,
+      "status": "charging",
+      "lastSeenAt": "2026-06-12T20:36:57.602Z",
+      "activeSessionId": "SES-0004"
+    },
+    {
+      "id": "CHG-A2",
+      "label": "Bay A2",
+      "connectorType": "CCS2",
+      "maxPowerKw": 350,
+      "status": "available",
+      "lastSeenAt": "2026-06-12T20:37:06.689Z"
+    },
+    {
+      "id": "CHG-A3",
+      "label": "Bay A3",
+      "connectorType": "CCS2",
+      "maxPowerKw": 180,
+      "status": "charging",
+      "lastSeenAt": "2026-06-12T20:36:49.893Z",
+      "activeSessionId": "SES-0014"
+    },
+    {
+      "id": "CHG-A4",
+      "label": "Bay A4",
+      "connectorType": "CHAdeMO",
+      "maxPowerKw": 100,
+      "status": "available",
+      "lastSeenAt": "2026-06-12T20:36:49.225Z"
+    },
+    {
+      "id": "CHG-A5",
+      "label": "Bay A5",
+      "connectorType": "GBT",
+      "maxPowerKw": 180,
+      "status": "available",
+      "lastSeenAt": "2026-06-12T20:36:46.563Z"
+    },
+    {
+      "id": "CHG-A6",
+      "label": "Bay A6",
+      "connectorType": "CCS2",
+      "maxPowerKw": 350,
+      "status": "charging",
+      "lastSeenAt": "2026-06-12T20:37:03.304Z",
+      "activeSessionId": "SES-0041"
+    },
+    {
+      "id": "CHG-B1",
+      "label": "Bay B1",
+      "connectorType": "Type2",
+      "maxPowerKw": 22,
+      "status": "charging",
+      "lastSeenAt": "2026-06-12T20:36:45.573Z",
+      "activeSessionId": "SES-0048"
+    },
+    {
+      "id": "CHG-B2",
+      "label": "Bay B2",
+      "connectorType": "Type2",
+      "maxPowerKw": 22,
+      "status": "available",
+      "lastSeenAt": "2026-06-12T20:36:43.335Z"
+    },
+    {
+      "id": "CHG-B3",
+      "label": "Bay B3",
+      "connectorType": "Type2",
+      "maxPowerKw": 11,
+      "status": "available",
+      "lastSeenAt": "2026-06-12T20:36:40.572Z"
+    },
+    {
+      "id": "CHG-B4",
+      "label": "Bay B4",
+      "connectorType": "Type2",
+      "maxPowerKw": 11,
+      "status": "available",
+      "lastSeenAt": "2026-06-12T20:36:54.151Z"
+    },
+    {
+      "id": "CHG-C1",
+      "label": "Bay C1",
+      "connectorType": "CCS2",
+      "maxPowerKw": 250,
+      "status": "charging",
+      "lastSeenAt": "2026-06-12T20:37:14.255Z",
+      "activeSessionId": "SES-0076"
+    },
+    {
+      "id": "CHG-C2",
+      "label": "Bay C2",
+      "connectorType": "GBT",
+      "maxPowerKw": 120,
+      "status": "available",
+      "lastSeenAt": "2026-06-12T20:36:46.065Z"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "SES-0001",
+      "chargerId": "CHG-A1",
+      "startedAt": "2026-06-12T19:36:39.382Z",
+      "endedAt": "2026-06-12T20:01:39.382Z",
+      "outputVoltageV": 425,
+      "outputCurrentA": 128.5,
+      "energyDeliveredKwh": 17.7
+    },
+    {
+      "id": "SES-0002",
+      "chargerId": "CHG-A1",
+      "startedAt": "2026-06-11T09:25:56.671Z",
+      "endedAt": "2026-06-11T10:13:56.671Z",
+      "outputVoltageV": 852.7,
+      "outputCurrentA": 270.8,
+      "energyDeliveredKwh": 144.1
+    },
+    {
+      "id": "SES-0003",
+      "chargerId": "CHG-A1",
+      "startedAt": "2026-06-07T06:20:38.953Z",
+      "endedAt": "2026-06-07T06:49:38.953Z",
+      "outputVoltageV": 700.2,
+      "outputCurrentA": 261.6,
+      "energyDeliveredKwh": 69.1
+    },
+    {
+      "id": "SES-0004",
+      "chargerId": "CHG-A1",
+      "startedAt": "2026-06-12T20:10:25.255Z",
+      "outputVoltageV": 736.2,
+      "outputCurrentA": 219.9,
+      "energyDeliveredKwh": 59.7
+    },
+    {
+      "id": "SES-0005",
+      "chargerId": "CHG-A2",
+      "startedAt": "2026-06-12T06:57:17.829Z",
+      "endedAt": "2026-06-12T07:23:17.829Z",
+      "outputVoltageV": 446.6,
+      "outputCurrentA": 192.4,
+      "energyDeliveredKwh": 29
+    },
+    {
+      "id": "SES-0006",
+      "chargerId": "CHG-A2",
+      "startedAt": "2026-06-12T01:28:55.614Z",
+      "endedAt": "2026-06-12T02:04:55.614Z",
+      "outputVoltageV": 550.5,
+      "outputCurrentA": 330.4,
+      "energyDeliveredKwh": 85.1
+    },
+    {
+      "id": "SES-0007",
+      "chargerId": "CHG-A2",
+      "startedAt": "2026-06-11T04:01:36.379Z",
+      "endedAt": "2026-06-11T04:47:36.379Z",
+      "outputVoltageV": 590,
+      "outputCurrentA": 187.6,
+      "energyDeliveredKwh": 66.2
+    },
+    {
+      "id": "SES-0008",
+      "chargerId": "CHG-A2",
+      "startedAt": "2026-06-11T00:47:54.761Z",
+      "endedAt": "2026-06-11T01:18:54.761Z",
+      "outputVoltageV": 675.5,
+      "outputCurrentA": 139,
+      "energyDeliveredKwh": 37.8
+    },
+    {
+      "id": "SES-0009",
+      "chargerId": "CHG-A2",
+      "startedAt": "2026-06-10T02:23:31.033Z",
+      "endedAt": "2026-06-10T03:16:31.033Z",
+      "outputVoltageV": 489.3,
+      "outputCurrentA": 180.3,
+      "energyDeliveredKwh": 60.8
+    },
+    {
+      "id": "SES-0010",
+      "chargerId": "CHG-A3",
+      "startedAt": "2026-06-10T16:25:51.719Z",
+      "endedAt": "2026-06-10T17:01:51.719Z",
+      "outputVoltageV": 798.4,
+      "outputCurrentA": 149.7,
+      "energyDeliveredKwh": 55.9
+    },
+    {
+      "id": "SES-0011",
+      "chargerId": "CHG-A3",
+      "startedAt": "2026-06-10T01:14:47.221Z",
+      "endedAt": "2026-06-10T01:46:47.221Z",
+      "outputVoltageV": 804.9,
+      "outputCurrentA": 154.3,
+      "energyDeliveredKwh": 51.7
+    },
+    {
+      "id": "SES-0012",
+      "chargerId": "CHG-A3",
+      "startedAt": "2026-06-07T13:48:27.541Z",
+      "endedAt": "2026-06-07T14:25:27.541Z",
+      "outputVoltageV": 903.1,
+      "outputCurrentA": 205,
+      "energyDeliveredKwh": 86.6
+    },
+    {
+      "id": "SES-0013",
+      "chargerId": "CHG-A3",
+      "startedAt": "2026-06-07T11:39:28.921Z",
+      "endedAt": "2026-06-07T12:25:28.921Z",
+      "outputVoltageV": 870.3,
+      "outputCurrentA": 267.8,
+      "energyDeliveredKwh": 107.6
+    },
+    {
+      "id": "SES-0014",
+      "chargerId": "CHG-A3",
+      "startedAt": "2026-06-12T20:14:25.255Z",
+      "outputVoltageV": 772.8,
+      "outputCurrentA": 332.4,
+      "energyDeliveredKwh": 56.6
+    },
+    {
+      "id": "SES-0015",
+      "chargerId": "CHG-A4",
+      "startedAt": "2026-06-12T20:23:13.647Z",
+      "endedAt": "2026-06-12T20:59:13.647Z",
+      "outputVoltageV": 427.1,
+      "outputCurrentA": 164.7,
+      "energyDeliveredKwh": 32.9
+    },
+    {
+      "id": "SES-0016",
+      "chargerId": "CHG-A4",
+      "startedAt": "2026-06-11T06:57:30.309Z",
+      "endedAt": "2026-06-11T07:50:30.309Z",
+      "outputVoltageV": 411.2,
+      "outputCurrentA": 107.2,
+      "energyDeliveredKwh": 30.4
+    },
+    {
+      "id": "SES-0017",
+      "chargerId": "CHG-A4",
+      "startedAt": "2026-06-11T02:23:43.012Z",
+      "endedAt": "2026-06-11T03:04:43.012Z",
+      "outputVoltageV": 492.6,
+      "outputCurrentA": 178.9,
+      "energyDeliveredKwh": 47
+    },
+    {
+      "id": "SES-0018",
+      "chargerId": "CHG-A4",
+      "startedAt": "2026-06-10T14:56:55.374Z",
+      "endedAt": "2026-06-10T15:30:55.374Z",
+      "outputVoltageV": 414.7,
+      "outputCurrentA": 134.8,
+      "energyDeliveredKwh": 24.7
+    },
+    {
+      "id": "SES-0019",
+      "chargerId": "CHG-A4",
+      "startedAt": "2026-06-10T08:24:36.799Z",
+      "endedAt": "2026-06-10T08:59:36.799Z",
+      "outputVoltageV": 433.3,
+      "outputCurrentA": 137.5,
+      "energyDeliveredKwh": 27.1
+    },
+    {
+      "id": "SES-0020",
+      "chargerId": "CHG-A4",
+      "startedAt": "2026-06-09T12:36:12.533Z",
+      "endedAt": "2026-06-09T13:35:12.533Z",
+      "outputVoltageV": 432.3,
+      "outputCurrentA": 184.3,
+      "energyDeliveredKwh": 61.1
+    },
+    {
+      "id": "SES-0021",
+      "chargerId": "CHG-A4",
+      "startedAt": "2026-06-09T09:41:07.526Z",
+      "endedAt": "2026-06-09T10:26:07.526Z",
+      "outputVoltageV": 403.9,
+      "outputCurrentA": 109.4,
+      "energyDeliveredKwh": 25.8
+    },
+    {
+      "id": "SES-0022",
+      "chargerId": "CHG-A5",
+      "startedAt": "2026-06-12T20:24:22.103Z",
+      "endedAt": "2026-06-12T21:29:22.103Z",
+      "outputVoltageV": 663.5,
+      "outputCurrentA": 232,
+      "energyDeliveredKwh": 130.1
+    },
+    {
+      "id": "SES-0023",
+      "chargerId": "CHG-A5",
+      "startedAt": "2026-06-11T12:25:34.114Z",
+      "endedAt": "2026-06-11T12:56:34.114Z",
+      "outputVoltageV": 422.5,
+      "outputCurrentA": 117.5,
+      "energyDeliveredKwh": 20
+    },
+    {
+      "id": "SES-0024",
+      "chargerId": "CHG-A5",
+      "startedAt": "2026-06-11T13:26:51.060Z",
+      "endedAt": "2026-06-11T14:02:51.060Z",
+      "outputVoltageV": 452.6,
+      "outputCurrentA": 151,
+      "energyDeliveredKwh": 32
+    },
+    {
+      "id": "SES-0025",
+      "chargerId": "CHG-A5",
+      "startedAt": "2026-06-10T02:00:22.004Z",
+      "endedAt": "2026-06-10T03:09:22.004Z",
+      "outputVoltageV": 578.5,
+      "outputCurrentA": 248.1,
+      "energyDeliveredKwh": 128.7
+    },
+    {
+      "id": "SES-0026",
+      "chargerId": "CHG-A5",
+      "startedAt": "2026-06-09T10:07:35.420Z",
+      "endedAt": "2026-06-09T10:46:35.420Z",
+      "outputVoltageV": 690.6,
+      "outputCurrentA": 101.7,
+      "energyDeliveredKwh": 35.6
+    },
+    {
+      "id": "SES-0027",
+      "chargerId": "CHG-A5",
+      "startedAt": "2026-06-09T11:23:15.429Z",
+      "endedAt": "2026-06-09T12:14:15.429Z",
+      "outputVoltageV": 673.5,
+      "outputCurrentA": 119.3,
+      "energyDeliveredKwh": 53.3
+    },
+    {
+      "id": "SES-0028",
+      "chargerId": "CHG-A5",
+      "startedAt": "2026-06-07T12:39:05.655Z",
+      "endedAt": "2026-06-07T13:39:05.655Z",
+      "outputVoltageV": 458.4,
+      "outputCurrentA": 223.3,
+      "energyDeliveredKwh": 79.8
+    },
+    {
+      "id": "SES-0029",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-12T20:03:58.291Z",
+      "endedAt": "2026-06-12T20:51:58.291Z",
+      "outputVoltageV": 472,
+      "outputCurrentA": 273.5,
+      "energyDeliveredKwh": 80.6
+    },
+    {
+      "id": "SES-0030",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-12T19:50:34.706Z",
+      "endedAt": "2026-06-12T20:32:34.706Z",
+      "outputVoltageV": 832.1,
+      "outputCurrentA": 200.3,
+      "energyDeliveredKwh": 91
+    },
+    {
+      "id": "SES-0031",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-12T19:49:49.172Z",
+      "endedAt": "2026-06-12T20:19:49.172Z",
+      "outputVoltageV": 785.2,
+      "outputCurrentA": 339.9,
+      "energyDeliveredKwh": 104.1
+    },
+    {
+      "id": "SES-0032",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-12T12:03:36.245Z",
+      "endedAt": "2026-06-12T12:32:36.245Z",
+      "outputVoltageV": 828.7,
+      "outputCurrentA": 261.9,
+      "energyDeliveredKwh": 81.8
+    },
+    {
+      "id": "SES-0033",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-12T02:38:29.850Z",
+      "endedAt": "2026-06-12T03:07:29.850Z",
+      "outputVoltageV": 756.1,
+      "outputCurrentA": 270.3,
+      "energyDeliveredKwh": 77
+    },
+    {
+      "id": "SES-0034",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-11T00:59:03.670Z",
+      "endedAt": "2026-06-11T01:41:03.670Z",
+      "outputVoltageV": 850.6,
+      "outputCurrentA": 320.1,
+      "energyDeliveredKwh": 148.7
+    },
+    {
+      "id": "SES-0035",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-11T05:20:31.015Z",
+      "endedAt": "2026-06-11T06:12:31.015Z",
+      "outputVoltageV": 478,
+      "outputCurrentA": 299.3,
+      "energyDeliveredKwh": 96.7
+    },
+    {
+      "id": "SES-0036",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-10T10:05:01.981Z",
+      "endedAt": "2026-06-10T10:35:01.981Z",
+      "outputVoltageV": 529.9,
+      "outputCurrentA": 235.7,
+      "energyDeliveredKwh": 48.7
+    },
+    {
+      "id": "SES-0037",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-10T10:27:46.092Z",
+      "endedAt": "2026-06-10T10:54:46.092Z",
+      "outputVoltageV": 732.7,
+      "outputCurrentA": 146.4,
+      "energyDeliveredKwh": 37.7
+    },
+    {
+      "id": "SES-0038",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-10T16:03:49.573Z",
+      "endedAt": "2026-06-10T16:33:49.573Z",
+      "outputVoltageV": 671.4,
+      "outputCurrentA": 323.5,
+      "energyDeliveredKwh": 84.7
+    },
+    {
+      "id": "SES-0039",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-09T11:47:41.530Z",
+      "endedAt": "2026-06-09T12:18:41.530Z",
+      "outputVoltageV": 619.1,
+      "outputCurrentA": 181.3,
+      "energyDeliveredKwh": 45.2
+    },
+    {
+      "id": "SES-0040",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-07T06:08:15.187Z",
+      "endedAt": "2026-06-07T06:48:15.187Z",
+      "outputVoltageV": 501.1,
+      "outputCurrentA": 345.7,
+      "energyDeliveredKwh": 90.1
+    },
+    {
+      "id": "SES-0041",
+      "chargerId": "CHG-A6",
+      "startedAt": "2026-06-12T20:19:25.255Z",
+      "outputVoltageV": 877.6,
+      "outputCurrentA": 295.4,
+      "energyDeliveredKwh": 63.8
+    },
+    {
+      "id": "SES-0042",
+      "chargerId": "CHG-B1",
+      "startedAt": "2026-06-12T19:34:19.179Z",
+      "endedAt": "2026-06-12T21:08:19.179Z",
+      "outputVoltageV": 300.6,
+      "outputCurrentA": 25.3,
+      "energyDeliveredKwh": 9.3
+    },
+    {
+      "id": "SES-0043",
+      "chargerId": "CHG-B1",
+      "startedAt": "2026-06-12T20:16:51.939Z",
+      "endedAt": "2026-06-12T21:19:51.939Z",
+      "outputVoltageV": 234.8,
+      "outputCurrentA": 25,
+      "energyDeliveredKwh": 4.8
+    },
+    {
+      "id": "SES-0044",
+      "chargerId": "CHG-B1",
+      "startedAt": "2026-06-11T05:13:28.628Z",
+      "endedAt": "2026-06-11T06:56:28.628Z",
+      "outputVoltageV": 254.9,
+      "outputCurrentA": 26.4,
+      "energyDeliveredKwh": 9
+    },
+    {
+      "id": "SES-0045",
+      "chargerId": "CHG-B1",
+      "startedAt": "2026-06-09T05:02:30.725Z",
+      "endedAt": "2026-06-09T07:40:30.725Z",
+      "outputVoltageV": 243.4,
+      "outputCurrentA": 20.1,
+      "energyDeliveredKwh": 10
+    },
+    {
+      "id": "SES-0046",
+      "chargerId": "CHG-B1",
+      "startedAt": "2026-06-07T15:51:00.430Z",
+      "endedAt": "2026-06-07T18:33:00.430Z",
+      "outputVoltageV": 407.9,
+      "outputCurrentA": 30.4,
+      "energyDeliveredKwh": 26.1
+    },
+    {
+      "id": "SES-0047",
+      "chargerId": "CHG-B1",
+      "startedAt": "2026-06-07T02:11:16.973Z",
+      "endedAt": "2026-06-07T03:28:16.973Z",
+      "outputVoltageV": 298.4,
+      "outputCurrentA": 17.7,
+      "energyDeliveredKwh": 5.3
+    },
+    {
+      "id": "SES-0048",
+      "chargerId": "CHG-B1",
+      "startedAt": "2026-06-12T20:28:25.255Z",
+      "outputVoltageV": 296.7,
+      "outputCurrentA": 19.8,
+      "energyDeliveredKwh": 0.7
+    },
+    {
+      "id": "SES-0049",
+      "chargerId": "CHG-B2",
+      "startedAt": "2026-06-12T20:21:23.214Z",
+      "endedAt": "2026-06-12T22:12:23.214Z",
+      "outputVoltageV": 409.2,
+      "outputCurrentA": 17.4,
+      "energyDeliveredKwh": 10.3
+    },
+    {
+      "id": "SES-0050",
+      "chargerId": "CHG-B2",
+      "startedAt": "2026-06-12T19:36:00.624Z",
+      "endedAt": "2026-06-12T21:41:00.624Z",
+      "outputVoltageV": 395.4,
+      "outputCurrentA": 31.5,
+      "energyDeliveredKwh": 20.2
+    },
+    {
+      "id": "SES-0051",
+      "chargerId": "CHG-B2",
+      "startedAt": "2026-06-12T20:24:20.558Z",
+      "endedAt": "2026-06-12T22:51:20.558Z",
+      "outputVoltageV": 349.1,
+      "outputCurrentA": 16.9,
+      "energyDeliveredKwh": 11.3
+    },
+    {
+      "id": "SES-0052",
+      "chargerId": "CHG-B2",
+      "startedAt": "2026-06-12T11:28:00.417Z",
+      "endedAt": "2026-06-12T13:34:00.417Z",
+      "outputVoltageV": 269,
+      "outputCurrentA": 30.1,
+      "energyDeliveredKwh": 13.3
+    },
+    {
+      "id": "SES-0053",
+      "chargerId": "CHG-B2",
+      "startedAt": "2026-06-11T13:10:22.178Z",
+      "endedAt": "2026-06-11T15:24:22.178Z",
+      "outputVoltageV": 275.6,
+      "outputCurrentA": 22.3,
+      "energyDeliveredKwh": 10.7
+    },
+    {
+      "id": "SES-0054",
+      "chargerId": "CHG-B2",
+      "startedAt": "2026-06-10T02:25:45.370Z",
+      "endedAt": "2026-06-10T03:39:45.370Z",
+      "outputVoltageV": 275,
+      "outputCurrentA": 24.8,
+      "energyDeliveredKwh": 6.6
+    },
+    {
+      "id": "SES-0055",
+      "chargerId": "CHG-B2",
+      "startedAt": "2026-06-10T15:51:33.652Z",
+      "endedAt": "2026-06-10T16:53:33.652Z",
+      "outputVoltageV": 344.1,
+      "outputCurrentA": 23.4,
+      "energyDeliveredKwh": 6.5
+    },
+    {
+      "id": "SES-0056",
+      "chargerId": "CHG-B2",
+      "startedAt": "2026-06-07T04:38:41.289Z",
+      "endedAt": "2026-06-07T06:15:41.289Z",
+      "outputVoltageV": 406.1,
+      "outputCurrentA": 23.8,
+      "energyDeliveredKwh": 12.2
+    },
+    {
+      "id": "SES-0057",
+      "chargerId": "CHG-B2",
+      "startedAt": "2026-06-07T06:20:16.387Z",
+      "endedAt": "2026-06-07T08:59:16.387Z",
+      "outputVoltageV": 278.8,
+      "outputCurrentA": 23.4,
+      "energyDeliveredKwh": 13.5
+    },
+    {
+      "id": "SES-0058",
+      "chargerId": "CHG-B3",
+      "startedAt": "2026-06-12T19:41:36.844Z",
+      "endedAt": "2026-06-12T20:50:36.844Z",
+      "outputVoltageV": 283.3,
+      "outputCurrentA": 21.7,
+      "energyDeliveredKwh": 5.5
+    },
+    {
+      "id": "SES-0059",
+      "chargerId": "CHG-B3",
+      "startedAt": "2026-06-12T11:44:55.947Z",
+      "endedAt": "2026-06-12T14:17:55.947Z",
+      "outputVoltageV": 311.6,
+      "outputCurrentA": 27.8,
+      "energyDeliveredKwh": 17.2
+    },
+    {
+      "id": "SES-0060",
+      "chargerId": "CHG-B3",
+      "startedAt": "2026-06-12T08:19:09.710Z",
+      "endedAt": "2026-06-12T09:37:09.710Z",
+      "outputVoltageV": 294.8,
+      "outputCurrentA": 19.4,
+      "energyDeliveredKwh": 5.8
+    },
+    {
+      "id": "SES-0061",
+      "chargerId": "CHG-B3",
+      "startedAt": "2026-06-12T01:37:39.258Z",
+      "endedAt": "2026-06-12T03:30:39.258Z",
+      "outputVoltageV": 305.4,
+      "outputCurrentA": 27.8,
+      "energyDeliveredKwh": 12.5
+    },
+    {
+      "id": "SES-0062",
+      "chargerId": "CHG-B3",
+      "startedAt": "2026-06-09T07:29:01.476Z",
+      "endedAt": "2026-06-09T09:30:01.476Z",
+      "outputVoltageV": 389.1,
+      "outputCurrentA": 21.6,
+      "energyDeliveredKwh": 13.2
+    },
+    {
+      "id": "SES-0063",
+      "chargerId": "CHG-B3",
+      "startedAt": "2026-06-09T07:08:20.461Z",
+      "endedAt": "2026-06-09T08:30:20.461Z",
+      "outputVoltageV": 311,
+      "outputCurrentA": 27.1,
+      "energyDeliveredKwh": 9
+    },
+    {
+      "id": "SES-0064",
+      "chargerId": "CHG-B4",
+      "startedAt": "2026-06-12T20:27:56.155Z",
+      "endedAt": "2026-06-12T23:25:56.155Z",
+      "outputVoltageV": 393.8,
+      "outputCurrentA": 17.9,
+      "energyDeliveredKwh": 16.3
+    },
+    {
+      "id": "SES-0065",
+      "chargerId": "CHG-B4",
+      "startedAt": "2026-06-12T19:53:17.315Z",
+      "endedAt": "2026-06-12T22:25:17.315Z",
+      "outputVoltageV": 319.2,
+      "outputCurrentA": 23.9,
+      "energyDeliveredKwh": 15.1
+    },
+    {
+      "id": "SES-0066",
+      "chargerId": "CHG-B4",
+      "startedAt": "2026-06-12T09:12:40.890Z",
+      "endedAt": "2026-06-12T11:20:40.890Z",
+      "outputVoltageV": 240,
+      "outputCurrentA": 24.7,
+      "energyDeliveredKwh": 9.9
+    },
+    {
+      "id": "SES-0067",
+      "chargerId": "CHG-B4",
+      "startedAt": "2026-06-12T07:33:58.718Z",
+      "endedAt": "2026-06-12T09:17:58.718Z",
+      "outputVoltageV": 309.1,
+      "outputCurrentA": 20.3,
+      "energyDeliveredKwh": 8.5
+    },
+    {
+      "id": "SES-0068",
+      "chargerId": "CHG-B4",
+      "startedAt": "2026-06-12T03:34:33.705Z",
+      "endedAt": "2026-06-12T05:10:33.705Z",
+      "outputVoltageV": 311.9,
+      "outputCurrentA": 25.2,
+      "energyDeliveredKwh": 9.8
+    },
+    {
+      "id": "SES-0069",
+      "chargerId": "CHG-B4",
+      "startedAt": "2026-06-11T08:35:08.113Z",
+      "endedAt": "2026-06-11T10:18:08.113Z",
+      "outputVoltageV": 314.1,
+      "outputCurrentA": 17.1,
+      "energyDeliveredKwh": 7.2
+    },
+    {
+      "id": "SES-0070",
+      "chargerId": "CHG-B4",
+      "startedAt": "2026-06-10T15:55:08.820Z",
+      "endedAt": "2026-06-10T18:31:08.820Z",
+      "outputVoltageV": 297.7,
+      "outputCurrentA": 28.3,
+      "energyDeliveredKwh": 17.1
+    },
+    {
+      "id": "SES-0071",
+      "chargerId": "CHG-B4",
+      "startedAt": "2026-06-09T03:06:47.788Z",
+      "endedAt": "2026-06-09T04:09:47.788Z",
+      "outputVoltageV": 368.1,
+      "outputCurrentA": 27.6,
+      "energyDeliveredKwh": 8.3
+    },
+    {
+      "id": "SES-0072",
+      "chargerId": "CHG-C1",
+      "startedAt": "2026-06-12T20:05:33.016Z",
+      "endedAt": "2026-06-12T20:44:33.016Z",
+      "outputVoltageV": 843,
+      "outputCurrentA": 243.4,
+      "energyDeliveredKwh": 104
+    },
+    {
+      "id": "SES-0073",
+      "chargerId": "CHG-C1",
+      "startedAt": "2026-06-12T05:36:14.010Z",
+      "endedAt": "2026-06-12T06:26:14.010Z",
+      "outputVoltageV": 638.1,
+      "outputCurrentA": 259.6,
+      "energyDeliveredKwh": 107.7
+    },
+    {
+      "id": "SES-0074",
+      "chargerId": "CHG-C1",
+      "startedAt": "2026-06-12T00:30:22.687Z",
+      "endedAt": "2026-06-12T01:06:22.687Z",
+      "outputVoltageV": 693.5,
+      "outputCurrentA": 339.4,
+      "energyDeliveredKwh": 110.2
+    },
+    {
+      "id": "SES-0075",
+      "chargerId": "CHG-C1",
+      "startedAt": "2026-06-07T12:26:28.770Z",
+      "endedAt": "2026-06-07T13:04:28.770Z",
+      "outputVoltageV": 677,
+      "outputCurrentA": 223.2,
+      "energyDeliveredKwh": 74.6
+    },
+    {
+      "id": "SES-0076",
+      "chargerId": "CHG-C1",
+      "startedAt": "2026-06-12T20:09:25.255Z",
+      "outputVoltageV": 610.1,
+      "outputCurrentA": 296.6,
+      "energyDeliveredKwh": 69.2
+    },
+    {
+      "id": "SES-0077",
+      "chargerId": "CHG-C2",
+      "startedAt": "2026-06-12T19:39:12.847Z",
+      "endedAt": "2026-06-12T20:11:12.847Z",
+      "outputVoltageV": 634.7,
+      "outputCurrentA": 152.5,
+      "energyDeliveredKwh": 40.3
+    },
+    {
+      "id": "SES-0078",
+      "chargerId": "CHG-C2",
+      "startedAt": "2026-06-12T20:12:43.954Z",
+      "endedAt": "2026-06-12T21:18:43.954Z",
+      "outputVoltageV": 734.6,
+      "outputCurrentA": 169.8,
+      "energyDeliveredKwh": 103
+    },
+    {
+      "id": "SES-0079",
+      "chargerId": "CHG-C2",
+      "startedAt": "2026-06-12T08:43:33.993Z",
+      "endedAt": "2026-06-12T09:51:33.993Z",
+      "outputVoltageV": 613.4,
+      "outputCurrentA": 111.4,
+      "energyDeliveredKwh": 60.4
+    },
+    {
+      "id": "SES-0080",
+      "chargerId": "CHG-C2",
+      "startedAt": "2026-06-11T15:08:02.537Z",
+      "endedAt": "2026-06-11T16:07:02.537Z",
+      "outputVoltageV": 620.8,
+      "outputCurrentA": 188.1,
+      "energyDeliveredKwh": 89.6
+    },
+    {
+      "id": "SES-0081",
+      "chargerId": "CHG-C2",
+      "startedAt": "2026-06-11T03:13:48.139Z",
+      "endedAt": "2026-06-11T04:05:48.139Z",
+      "outputVoltageV": 587.3,
+      "outputCurrentA": 137.8,
+      "energyDeliveredKwh": 54.7
+    },
+    {
+      "id": "SES-0082",
+      "chargerId": "CHG-C2",
+      "startedAt": "2026-06-10T09:11:24.306Z",
+      "endedAt": "2026-06-10T09:55:24.306Z",
+      "outputVoltageV": 458.4,
+      "outputCurrentA": 234.5,
+      "energyDeliveredKwh": 61.5
+    },
+    {
+      "id": "SES-0083",
+      "chargerId": "CHG-C2",
+      "startedAt": "2026-06-10T11:24:31.996Z",
+      "endedAt": "2026-06-10T12:09:31.996Z",
+      "outputVoltageV": 735.3,
+      "outputCurrentA": 164,
+      "energyDeliveredKwh": 70.2
+    },
+    {
+      "id": "SES-0084",
+      "chargerId": "CHG-C2",
+      "startedAt": "2026-06-07T08:18:28.423Z",
+      "endedAt": "2026-06-07T08:59:28.423Z",
+      "outputVoltageV": 433.5,
+      "outputCurrentA": 218.4,
+      "energyDeliveredKwh": 50.5
+    }
+  ],
+  "faults": []
+}

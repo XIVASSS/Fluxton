@@ -117,7 +117,7 @@ Supported `scenario` values: `default`, `empty`, `all-faulted`, `no-faults`.
 ### Charger overview ✅
 
 - [x] All chargers with current status (available, charging, faulted, offline)
-- [x] Status visually distinct via **color + iconography** (`StatusDot`, `StatusBadge`, row accents) — not text alone
+- [x] Status visually distinct via **color + iconography** (`StatusIcon`, `StatusBadge`, row accents) — not text alone
 - [x] Faulted/offline units sort to top (`STATUS_PRIORITY`)
 - [x] Click row → detail panel; list remains visible on desktop (`ChargersTab` split layout)
 
@@ -213,6 +213,16 @@ DepotData {
 
 [`src/lib/mock/generate.ts`](./src/lib/mock/generate.ts) builds a **12-bay fleet** (`FLEET` constant) mixing DC fast (CCS2, CHAdeMO, GBT) and AC (Type2) units.
 
+### Static JSON snapshots
+
+Committed reference files in [`mock-data/`](./mock-data/) — one per scenario (`depot_default.json`, `depot_empty.json`, etc.). Regenerate after changing the mock layer:
+
+```bash
+npm run export-mock
+```
+
+These satisfy the submission requirement for a mock data file with realistic values. The live app uses the same generator via `GET /api/depot?scenario=` so timestamps stay current at runtime.
+
 **Electrical realism:**
 
 | Connector family | Voltage | Current | Typical session |
@@ -260,6 +270,10 @@ All transforms live in [`src/lib/selectors.ts`](./src/lib/selectors.ts). Compone
 .
 ├── DESIGN.md                      Part A design document
 ├── README.md                      This file
+├── mock-data/                     Static JSON snapshots (npm run export-mock)
+│   └── depot_*.json
+├── scripts/
+│   └── export-mock-data.ts        Regenerate mock-data/*.json
 ├── public/                        Static assets
 └── src/
     ├── app/
@@ -308,7 +322,7 @@ Each status maps to color **and** icon in [`src/lib/constants.ts`](./src/lib/con
 | Status | Color signal | Icon |
 |--------|--------------|------|
 | Available | Neutral grey | Plug |
-| Charging | Lime green (pulsing dot) | Bolt |
+| Charging | Lime green (pulsing dot on list row when live) | Bolt |
 | Faulted | Red | Alert triangle |
 | Offline | Salmon / amber | Power off |
 
@@ -367,7 +381,7 @@ Updated via `history.replaceState` — no full page reload.
 - [x] Full source code
 - [x] Part A design document — [`DESIGN.md`](./DESIGN.md)
 - [x] README with setup, run instructions, mock data description — this file
-- [x] Mock data generator with realistic charger, session, and fault data — `src/lib/mock/`
+- [x] Mock data generator with realistic charger, session, and fault data — `src/lib/mock/` + `mock-data/*.json`
 
 ---
 
