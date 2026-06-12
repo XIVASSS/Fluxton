@@ -27,7 +27,7 @@ export function StatusBadge({
         fontFamily: "var(--font-dm-sans)",
       }}
     >
-      <StatusIcon status={status} size={isSm ? 12 : 14} />
+      <StatusIcon status={status} size={isSm ? 13 : 14} strokeWidth={1.85} />
       {meta.label}
     </span>
   );

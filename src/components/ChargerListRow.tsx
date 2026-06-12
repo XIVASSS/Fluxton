@@ -36,17 +36,13 @@ export function ChargerListRow({
       }`}
     >
       <span
-        className={`inline-flex shrink-0 items-center justify-center rounded-lg border p-1.5 ${
-          charger.status === "faulted" || charger.status === "offline"
-            ? "border-[color-mix(in_srgb,var(--color-bone)_14%,transparent)]"
-            : "border-ink"
-        }`}
+        className="inline-flex shrink-0 items-center justify-center rounded-full p-2"
         style={{
-          backgroundColor: `color-mix(in srgb, ${meta.color} 14%, transparent)`,
+          backgroundColor: `color-mix(in srgb, ${meta.color} 12%, transparent)`,
         }}
         aria-hidden="true"
       >
-        <StatusIcon status={charger.status} size={14} />
+        <StatusIcon status={charger.status} size={15} strokeWidth={1.85} />
       </span>
       <div className="min-w-0 flex-1">
         <div className="flex items-baseline gap-2">
