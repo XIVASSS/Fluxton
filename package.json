@@ -1,0 +1,28 @@
+{
+  "name": "ev-depot-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EV depot management dashboard for charging operators — Dimension dark glassmorphic UI.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "framer-motion": "^12.40.0",
+    "lucide-react": "^1.18.0",
+    "next": "^16.2.9",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "recharts": "2.15.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.5",
+    "@types/node": "22.15.3",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "tailwindcss": "4.1.5",
+    "typescript": "5.8.3"
+  }
+}

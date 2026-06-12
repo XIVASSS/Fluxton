@@ -1,0 +1,272 @@
+@import "tailwindcss";
+
+/*
+ * fluxton — Mytasky × flight-tracker hybrid register.
+ * Matte graphite canvas, warm copper glow, neon lime + lavender accents,
+ * high-contrast asymmetrical white widgets.
+ */
+@theme {
+  /* Surfaces */
+  --color-void: #0c0c0e;
+  --color-graphite: #101012;
+  --color-char: #161618;
+  --color-ink: #222226;
+  --color-iron: #1a1a1e;
+  --color-slate: #2a2a30;
+  --color-smoke: #45454f;
+
+  /* Mytasky accent palette */
+  --color-lime: #c8ff4a;
+  --color-lavender: #b8a4f5;
+  --color-salmon: #ff9b8a;
+  --color-indigo-haze: #b8a4f5;
+
+  /* Elevated light surface */
+  --color-surface-elevated: #fafafa;
+  --color-surface-elevated-text: #0c0c0e;
+  --color-surface-elevated-muted: #6b6b76;
+
+  /* Text */
+  --color-bone: #ffffff;
+  --color-mist: #c8c8d0;
+  --color-ash: #8a8a96;
+  --color-fog: #5c5c68;
+  --color-paper: #ffffff;
+  --color-onyx: #000000;
+
+  /* Semantic status */
+  --color-status-available: #8a8a96;
+  --color-status-charging: #c8ff4a;
+  --color-status-faulted: #ff6b6b;
+  --color-status-offline: #ff9b8a;
+
+  /* Fonts */
+  --font-dm-sans: var(--font-dm-sans-loaded), ui-sans-serif, system-ui, sans-serif;
+  --font-geist: var(--font-geist-loaded), ui-sans-serif, system-ui, sans-serif;
+
+  /* Radii */
+  --radius-input: 12px;
+  --radius-card: 28px;
+  --radius-large: 40px;
+  --radius-pill: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-bone);
+  font-family: var(--font-geist);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Warm organic glow — single canvas across rail + main (Mytasky seamless) */
+.dawn-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      120% 85% at 0% 0%,
+      rgba(255, 130, 70, 0.3) 0%,
+      rgba(255, 100, 50, 0.14) 22%,
+      rgba(255, 80, 40, 0.05) 42%,
+      rgba(12, 12, 14, 0) 68%
+    ),
+    radial-gradient(
+      70% 55% at 12% 18%,
+      rgba(255, 160, 90, 0.08) 0%,
+      rgba(12, 12, 14, 0) 55%
+    ),
+    radial-gradient(
+      50% 40% at 88% 8%,
+      rgba(184, 164, 245, 0.07) 0%,
+      rgba(12, 12, 14, 0) 55%
+    );
+}
+
+/* Seamless app shell — transparent layers, glow comes from dawn-glow only */
+.app-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.seamless-rail {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.seamless-main {
+  position: relative;
+  background: transparent;
+}
+
+/* Soft floating surfaces (Mytasky seamless — no hard card edges) */
+.surface-soft {
+  background: rgba(255, 255, 255, 0.035);
+  border: none;
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.surface-frost {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Rich dark panel — soft edge, no harsh outline */
+.panel,
+.panel-rich {
+  background: rgba(255, 255, 255, 0.04);
+  border: none;
+  border-radius: 28px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.panel-rich {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass {
+  background-color: var(--color-char);
+  border: 1px solid var(--color-ink);
+}
+
+/* Asymmetrical white widget — stepped top-right corner */
+.widget-white {
+  background-color: var(--color-surface-elevated);
+  color: var(--color-surface-elevated-text);
+  border-radius: 28px 14px 28px 28px;
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.panel-elevated {
+  background-color: var(--color-surface-elevated);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 28px 14px 28px 28px;
+  color: var(--color-surface-elevated-text);
+}
+
+/* Gradient hero stat */
+.text-gradient-stat {
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-lavender) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pill-lime {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  background-color: color-mix(in srgb, var(--color-lime) 18%, transparent);
+  color: var(--color-lime);
+  border: 1px solid color-mix(in srgb, var(--color-lime) 35%, transparent);
+  padding: 0.25rem 0.65rem;
+}
+
+.pill-lavender {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  background-color: color-mix(in srgb, var(--color-lavender) 22%, transparent);
+  color: var(--color-lavender);
+  border: 1px solid color-mix(in srgb, var(--color-lavender) 40%, transparent);
+  padding: 0.25rem 0.65rem;
+}
+
+.pill-salmon {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  background-color: color-mix(in srgb, var(--color-salmon) 18%, transparent);
+  color: #e85d4a;
+  border: 1px solid color-mix(in srgb, var(--color-salmon) 35%, transparent);
+  padding: 0.25rem 0.65rem;
+}
+
+.hairline {
+  border: none;
+  border-top: 1px solid var(--color-ink);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::selection {
+  background: rgba(184, 164, 245, 0.35);
+  color: var(--color-paper);
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes pathDraw {
+  from { stroke-dashoffset: 1200; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes nodePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-lavender) 50%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 24px 8px color-mix(in srgb, var(--color-lavender) 35%, transparent);
+  }
+}
+
+.route-path-draw {
+  stroke-dasharray: 1200;
+  animation: pathDraw 2s ease-out forwards;
+}
+
+.node-pulse {
+  animation: nodePulse 2.5s ease-in-out infinite;
+}
+
+.card-interactive {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-interactive-glow:hover {
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    0 0 40px color-mix(in srgb, var(--color-lime) 8%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-path-draw,
+  .node-pulse {
+    animation: none;
+  }
+}
